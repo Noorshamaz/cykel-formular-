@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+#bikeForm .cykel-form-container {
+    /* Indstil stil for formularens container */
+   background-color: #f4f4f4;
+   padding: 20px;
+   border-radius: 4px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   max-width: 800px;
+   width: 100%;
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+#bikeForm .cykel-header {
+   /* Stil til formularerens header */
+   text-align: center;
+   font-size: 1.5em; 
+   color: #3C5629; 
+   font-weight: bold; 
+   margin-bottom: 24px;
+   text-transform: uppercase;
+}
+
+#bikeForm .cykel-label {
+   /* Label stil */
+   display: block;
+   margin-top: 4px;
+   font-size: 0.9em;
+   color: #788E67;
+}
+
+#bikeForm .cykel-label a {
+   color: #3E9FC9;
+   text-decoration: underline; 
+}
+
+#bikeForm .cykel-label a:hover {
+   color: #3389AE; 
+   text-decoration: underline; 
+}
+
+#bikeForm .cykel-input {
+   /* Inputfeltets stil */
+   width: 100%;
+   padding: 8px;
+   margin-top: 4px;
+   margin-bottom: 8px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   color: #5A7248;
+}
+
+#bikeForm .cykel-input:focus {
+   outline: none;
+   border-color: #EEC766;
+   box-shadow: 0px 0px 5px rgba(238, 199, 102, 0.5);
+}
+
+#bikeForm .cykel-button {
+   /* Knappens stil */
+   width: 80%;
+   padding: 10px;
+   color: #3C5629;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 24px;
+   font-weight: bold; 
+   margin-bottom: 16px;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: center;
+    background-color: white;
+   border: 1px solid #3C5629;
+}
+
+#bikeForm .cykel-button-book {
+   width: 80%;
+   padding: 10px;
+   background-color: #F7CF6C;
+   color: #3C5629;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 16px;
+   margin-top: 24px;
+   font-weight: bold; 
+   margin-bottom: 16px;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: center;
+}
+
+#bikeForm .cykel-button:hover {
+   background-color: #F7F0EA; 
+}
+
+#bikeForm .cykel-button-book:disabled {
+   background-color: #ccc;
+   color: #8E8E8E;
+   cursor: not-allowed;
+}
+
+#bikeForm .cykel-availability-message {
+   /* Cykel tilgængelighed beskedens stil */
+   margin-top: 20px;
+   font-weight: bold;
+   text-align: center;
+}
+
+.message {
+   /* Succes beskedens stil */
+           display: none;
+           margin-top: 20px;
+           padding: 10px;
+           color: green;
+           border: 1px solid green;
+           border-radius: 5px;
+           background-color: #e6ffe6;
+           text-align: center;
+}
+
+@media (max-width: 768px) {
+   #bikeForm .cykel-form-container {
+       /* Stil til mobile enheder */
+       width: 80%;
+   }
+}
+
+#bikeForm .cykel-section-header {
+   /* Sektionstitler stil */
+   font-size: 1em; 
+   color: #3C5629; 
+   font-weight: bold; 
+   margin-bottom: 8px;
+   margin-top: 16px;
+   text-transform: uppercase;
+}
+
+#required {
+   font-size: 0.8em; 
+   color: #3C5629; 
+   margin-bottom: 32px;
+   margin-top: 4px;
+  
+}
+#knapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 16px;
+}

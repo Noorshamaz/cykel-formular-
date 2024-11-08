@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="..." />
+    <title>Hotel Nybork</title>
+    <link rel="icon" href="media/..." type="image/svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="bikeForm" class="cykel-form-container">
+      <!-- Formularens overskrift -->
+      <h2 class="cykel-header">Cykel booking</h2>
+      <form id="bikeForm">
+        <!-- Sektion for indtastning af brugerens oplysninger -->
+        <h3 class="cykel-section-header">Indtast dine data *</h3>
+        <label for="email" class="cykel-label"
+          >E-mail adresse brugt til reservation</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="cykel-input"
+          required
+        />
+        <label for="roomNumber" class="cykel-label"
+          >Indtast værelsesnummer</label
+        >
+        <input
+          type="number"
+          id="roomNumber"
+          name="roomNumber"
+          class="cykel-input"
+          required
+        />
+
+        <!-- Sektion for valg af cykeltype -->
+        <h3 class="cykel-section-header">Vælg mindst én cykel *</h3>
+        <div>
+          <label class="cykel-label">Til voksne</label>
+          <input
+            type="number"
+            id="adultBikes"
+            name="adultBikes"
+            min="0"
+            max="10"
+            value="0"
+            class="cykel-input"
+          />
+        </div>
+        <div>
+          <label class="cykel-label">Til børn (op til 7 år)</label>
+          <input
+            type="number"
+            id="childBikes7"
+            name="childBikes7"
+            min="0"
+            max="10"
+            value="0"
+            class="cykel-input"
+          />
+        </div>
+        <div>
+          <label class="cykel-label">Til børn (op til 15 år)</label>
+          <input
+            type="number"
+            id="childBikes15"
+            name="childBikes15"
+            min="0"
+            max="10"
+            value="0"
+            class="cykel-input"
+          />
+        </div>
+
+        <!-- Sektion for valg af dato -->
+        <h3 class="cykel-section-header">Vælg én dato (én dag) *</h3>
+        <input type="date" id="date" name="date" class="cykel-input" required />
+
+        <p id="required" class="required">* påkrævede felter</p>
+        <!-- Checkbox og link til privatlivspolitik -->
+        <label class="cykel-label">
+          <input type="checkbox" id="privacyPolicy" required />
+          Jeg accepterer
+          <a
+            href="https://cyklerhotelnyborg.designbyjimmi.com/privatlivspolitik/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Privatlivspolitik</a
+          >
+        </label>
+
+        <!-- Knappen for at tjekke cyklers tilgængelighed -->
+        <div id="knapper" class="knapper">
+          <button
+            type="button"
+            class="cykel-button"
+            onclick="checkAvailability()"
+          >
+            Tjek tilgængelighed
+          </button>
+
+          <!-- Besked om tilgængelighed -->
+          <p id="availabilityMessage" class="cykel-availability-message"></p>
+
+          <!-- Knappen til at booke cykler - inaktiveret by default -->
+          <button
+            type="button"
+            id="bookButton"
+            class="cykel-button-book"
+            disabled
+          >
+            Book cykler
+          </button>
+
+          <div id="successMessage" class="message">
+            Din reservation blev gennemført! Du kan afhente dine cykler i
+            receptionen.
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
